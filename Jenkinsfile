@@ -3,7 +3,7 @@ node {
 	git https://github.com/shadab786khan/my-app.git
 	      }
 	      stage('Build Package'){
-		      def mvhHome =
-			      sh "${mvhHome} package"
+		      def mvhHome = tool name: 'mvn3', type: 'maven'
+			      sh "${mvhHome}/bin/mvn package"
 	      }
 }
